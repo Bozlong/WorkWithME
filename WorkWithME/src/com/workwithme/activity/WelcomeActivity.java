@@ -1,14 +1,17 @@
 package com.workwithme.activity;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class WelcomeActivity extends ActionBarActivity {
+public class WelcomeActivity extends ActionBarActivity implements OnClickListener{
 
 	TextView tv_Welcome,tv_Account,tv_headline;
 	Button btn_login,btn_signup;
@@ -47,5 +50,17 @@ public class WelcomeActivity extends ActionBarActivity {
 	private void fullScreen()
 	{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		if( v.getId() == R.id.btn_login){
+			Intent loginPage = new Intent(WelcomeActivity.this,LoginActivity.class);
+		}
+		
+		if( v.getId() == R.id.btn_signup){
+			Intent signinPage = new Intent(WelcomeActivity.this,SignUpActivity.class);
+		}
 	}
 }
