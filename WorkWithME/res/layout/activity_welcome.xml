@@ -10,26 +10,26 @@
     tools:context="com.workwithme.activity.WelcomeActivity" >
               	<!-- style="AppFontNormal" -->
 
-    <TextView
-        android:id="@+id/tv_welcome"
+    <Button
+        android:id="@+id/btn_login"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="247dp"
-        android:layout_marginLeft="31dp"
-        android:text="@string/str_welcome"
+        android:layout_height="38dp"
+        android:layout_alignBaseline="@+id/tv_account"
+        android:layout_alignBottom="@+id/tv_account"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:text="@string/login"
         android:textColor="#FFFFFF"
-        android:textSize="15dp" />
+        android:textSize="14dp" />
 
     <TextView
         android:id="@+id/tv_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_account"
+        android:layout_alignLeft="@+id/tv_welcome"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="62dp"
         android:text="Welcome!"
         android:textColor="#FFFFFF"
         android:textSize="45dp" />
@@ -38,10 +38,21 @@
         android:id="@+id/btn_signup"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_alignRight="@+id/tv_account"
-        android:layout_alignTop="@+id/tv_welcome"
-        android:layout_marginTop="19dp"
+        android:layout_below="@+id/tv_welcome"
+        android:layout_marginTop="9dp"
+        android:layout_toLeftOf="@+id/btn_login"
         android:text="@string/signup"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_signup"
+        android:layout_below="@+id/tv_headline"
+        android:layout_marginTop="194dp"
+        android:text="@string/str_welcome"
         android:textColor="#FFFFFF"
         android:textSize="15dp" />
 
@@ -49,24 +60,11 @@
         android:id="@+id/tv_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_signup"
         android:layout_below="@+id/btn_signup"
-        android:layout_marginRight="13dp"
-        android:layout_marginTop="15dp"
-        android:layout_toLeftOf="@+id/btn_login"
+        android:layout_marginTop="9dp"
         android:text="@string/str_account"
         android:textColor="#FFFFFF"
         android:textSize="15dp" />
-
-    <Button
-        android:id="@+id/btn_login"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/tv_account"
-        android:layout_alignBottom="@+id/tv_account"
-        android:layout_alignParentRight="true"
-        android:text="@string/login"
-        android:textColor="#FFFFFF"
-        android:textSize="14dp" />
 
 </RelativeLayout>
