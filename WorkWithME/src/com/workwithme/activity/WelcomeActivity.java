@@ -1,6 +1,7 @@
 package com.workwithme.activity;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +12,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class WelcomeActivity extends ActionBarActivity implements OnClickListener{
+public class WelcomeActivity extends Activity implements OnClickListener{
 
 	TextView tv_Welcome,tv_Account,tv_headline;
 	Button btn_login,btn_signup;
